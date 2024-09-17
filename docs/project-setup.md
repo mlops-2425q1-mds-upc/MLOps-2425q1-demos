@@ -90,8 +90,9 @@ We will use [Poetry](https://python-poetry.org) as the dependency manager for ou
 
 14. Push the changes to the remote repository:
     ```bash
-    git push -u origin master
+    git push -u origin branch-name
     ```
-    This will push the changes to the `main` branch of the remote repository.
+    This will push the changes to the `branch-name` branch of the remote repository.
+    By default, newer versions of git set the initial default branch to `main`. Older versions use the branch name `master`.
 
 Your project is now set up with the project structure and dependency manager. You can start working on your project by adding code, data, and other project-specific files to the project directory. Make sure to follow best practices for project organization and version control to ensure reproducibility and collaboration.
