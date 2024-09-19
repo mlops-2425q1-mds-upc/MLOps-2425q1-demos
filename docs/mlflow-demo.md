@@ -37,16 +37,13 @@ pip install mlflow
 ```
 
 ## Configure a tracking server
-By default MLflow stores the tracking data locally in an `mlruns` subdirectory of where you ran the code. However, we are going to work in a collaboratibe project, so we need to use a shared storage so that all the team members can access the tracking data. MLflow supports several tracking servers, such as AWS S3, Azure Blob Storage, Google Cloud Storage, and Databricks.
+By default, MLflow stores the tracking data locally in an `mlruns` subdirectory of where you ran the code. However, we are going to work in a collaboratibe project, so we need to use a shared storage so that all the team members can access the tracking data. MLflow supports several tracking servers, such as AWS S3, Azure Blob Storage, Google Cloud Storage, and Databricks.
 
-In this demo we will use Dagshub  as it provides an easy
+In this demo, we will use Dagshub  as it provides an easy
 way to configure a tracking server. To do this, we first need to create a
-repository in Dagshub or to [link our GitHub repository to Dagshub](https://dagshub.com/docs/integration_guide/github/). Then, we can easily [configure MLflow to use Dagshub as its tracking server](https://dagshub.com/docs/integration_guide/mlflow_tracking/) by setting the
-environment valiables shown in the Dagshub repository.
-
-<p align="center">
-    <img src="static/dagshub-mlflow-config.png" width="700" alt="Dagshub MLflow configuration">
-</p>
+repository in Dagshub or to [link our GitHub repository to Dagshub](https://dagshub.com/docs/integration_guide/github/).
+Then, we can easily [configure MLflow to use Dagshub as its tracking server](https://dagshub.com/docs/integration_guide/mlflow_tracking/)
+by setting the following environment variables: MLFLOW_TRACKING_URI, MLFLOW_TRACKING_USERNAME, and MLFLOW_TRACKING_PASSWORD.
 
 To add the environment variables to our project we can use a `.env` file the following content:
 
@@ -55,6 +52,8 @@ MLFLOW_TRACKING_URI=https://dagshub.com/<DagsHub-user-name>/<reposytory-name>.ml
 MLFLOW_TRACKING_USERNAME=your_username
 MLFLOW_TRACKING_PASSWORD=your_token
 ```
+
+For the MLFLOW_TRACKING_PASSWORD you can use your DagsHub password or preferably an [access token](https://dagshub.com/user/settings/tokens).
 
 Then, we can load the environment variables adding the following code to our `config.py` file:
 
