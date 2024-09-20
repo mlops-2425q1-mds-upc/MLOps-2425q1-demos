@@ -82,6 +82,12 @@ With this, every new file or directory added to the `data` directory will be aut
 dvc add data/raw
 ```
 
+Similar to git, the data needs to be uploaded to the remote repository so that it can be shared with anyone with access to the repository. To do this, we simply need to tell DVC to push the data with:
+
+```bash
+dvc push
+```
+
 ### Import raw data
 In case you are working with data comming from another project using DVC or Git, you can import the data using the [`dvc import`](https://dvc.org/doc/command-reference/import) command:
 
