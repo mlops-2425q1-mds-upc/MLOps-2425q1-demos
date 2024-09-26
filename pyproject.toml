@@ -22,10 +22,10 @@ debugpy = "1.8.5"
 pyyaml = "^6.0.2"
 requests = "^2.32.3"
 deepchecks = {version = "^0.18", extras = ["vision"]}
-torchvision = {version = "^0.19.1+cu121", source = "pytorch"}
+torchvision = "^0.19"
 pydantic = "^2.9"
 opencv-python = "^4.10.0.84"
-tensorflow = ">2.0,<2.18.0"
+tensorflow = ">2.10,<2.18.0"
 tensorflow-hub = ">0.5"
 python-multipart = "^0.0.9"
 pillow = "^10.4.0"
@@ -42,18 +42,13 @@ deptry = "^0.18.0"
 pre-commit = "^3.8.0"
 
 
-
-[[tool.poetry.source]]
-name = "pytorch"
-url = "https://download.pytorch.org/whl/cu121"
-priority = "supplemental"
-
 [tool.coverage.run]
 omit = ["src/prepare.py", "src/evaluate.py", "src/train.py", "src/train_api_demo_models.py"]
 
 [tool.pytest.ini_options]
+pythonpath = "."
 testpaths = "tests"
-addopts = "--junitxml=out/tests-report.xml --cov=src --cov-report=html:out/coverage"
+addopts = "--junitxml=out/tests-report.xml --cov=src --cov-report=html:reports/coverage"
 
 [build-system]
 requires = ["poetry-core"]
