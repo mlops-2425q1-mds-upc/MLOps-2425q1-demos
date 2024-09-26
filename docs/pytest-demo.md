@@ -32,12 +32,14 @@ Finally, we will add the following lines to the [`pyproject.toml`](../pyproject.
 omit = ["src/prepare.py", "src/evaluate.py", "src/train.py", "src/train_api_demo_models.py"]
 
 [tool.pytest.ini_options]
+pythonpath = "."
 testpaths = "tests"
 addopts = "--junitxml=out/tests-report.xml --cov=src --cov-report=html:out/coverage"
 ```
 
 In detail:
 - `omit` specifies the files that should be omitted from the coverage report;
+- `pythonpath` specifies the path to the root directory of the project;
 - `testpaths` specifies the directory where the tests are located;
 - `addopts` specifies the options to pass to `pytest`. In this case, we are specifying the path to the results file that
 - can be read by continuous integration tools, the path to the module for the coverage report and the directory where
@@ -46,5 +48,5 @@ In detail:
 ## Run the tests
 We can now run the tests using the following command:
 ```bash
-PYTHONPATH=. python3 -m pytest
+pytest
 ```
