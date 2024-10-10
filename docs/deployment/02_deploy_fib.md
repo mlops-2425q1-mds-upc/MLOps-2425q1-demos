@@ -3,7 +3,7 @@
 # Private cloud Virtech setup: How to deploy ML models in a private cloud VM (Virtech)?
 
 1. Get a VM.
-- Follow the documentation from https://www.fib.upc.edu/es/la-fib/servicios-tic/cloud-docente-fib.
+- Follow the documentation from https://www.fib.upc.edu/en/fib/it-services/cloud-fib-teaching.
 
 2. Connect to the VM from local machine.
 - Type `ifconfig` to get ip of your VM
