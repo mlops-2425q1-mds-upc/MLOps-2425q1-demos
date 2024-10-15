@@ -11,8 +11,7 @@ checkpoint = context.checkpoints.get("iowa_training_data_checkpoint")
 x_train = pd.read_csv(PROCESSED_DATA_DIR / "X_train.csv")
 y_train = pd.read_csv(PROCESSED_DATA_DIR / "y_train.csv")
 
-dataset = pd.concat([x_train, y_train], axis=1)
+dataframe = pd.concat([x_train, y_train], axis=1)
 
-batch_parameters = {"dataset": dataset}
+batch_parameters = {"dataframe": dataframe}
 validation_result = checkpoint.run(batch_parameters=batch_parameters)
-print(validation_result)

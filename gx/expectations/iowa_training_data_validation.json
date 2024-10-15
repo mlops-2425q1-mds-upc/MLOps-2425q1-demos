@@ -75,7 +75,9 @@
     {
       "id": "af4c5ac9-5c65-47cf-8e29-6933ebc124e7",
       "kwargs": {
-        "column": "MSSubClass"
+        "column": "MSSubClass",
+        "min_value": 0.0,
+        "max_value": 200.0
       },
       "meta": {},
       "type": "expect_column_values_to_be_between"
