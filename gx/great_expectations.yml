@@ -87,11 +87,11 @@ fluent_datasources:
     assets:
       training:
         type: dataframe
-        id: c0355883-29f3-4938-b081-df308e1a1edc
+        id: 63eb325c-4298-44fc-b313-d3c2dfe61de0
         batch_metadata: {}
         batch_definitions:
           training_batch:
-            id: d02d5464-4201-45de-9ddd-97a4d32f54dd
+            id: e17ccf44-33e4-4ff3-8e7b-8c659d89aebf
             partitioner:
 analytics_enabled:
 data_context_id: 1ad85348-942e-4cf2-8c6d-e9480cfcf85f

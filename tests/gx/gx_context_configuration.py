@@ -71,7 +71,7 @@ expectations_suite.add_expectation(
 )
 
 expectations_suite.add_expectation(
-    gx.expectations.ExpectColumnValuesToBeBetween(column="MSSubClass")
+    gx.expectations.ExpectColumnValuesToBeBetween(column="MSSubClass", min_value=0, max_value=200)
 )
 expectations_suite.add_expectation(
     gx.expectations.ExpectColumnValuesToBeOfType(column="MSSubClass", type_="float64")
