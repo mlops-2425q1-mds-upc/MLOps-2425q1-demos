@@ -1,7 +1,7 @@
 {
   "expectations": [
     {
-      "id": "9b9a9372-10e3-4c76-beea-046c3e59adc7",
+      "id": "aef9d791-faac-4503-af89-bc081382e0e2",
       "kwargs": {
         "column_list": [
           "MSSubClass",
@@ -48,7 +48,7 @@
       "type": "expect_table_columns_to_match_ordered_list"
     },
     {
-      "id": "351ac730-5a9a-4ddf-8fa3-d5ae671e12c7",
+      "id": "a608e084-6296-4568-9b26-b9da8888e3ec",
       "kwargs": {
         "column": "Id"
       },
@@ -56,7 +56,7 @@
       "type": "expect_column_values_to_be_unique"
     },
     {
-      "id": "e14d5c6d-62e2-4720-aad3-e91e0aed16dc",
+      "id": "cedd96ba-90e7-4aa8-ab9f-1b0491449a84",
       "kwargs": {
         "column": "Id"
       },
@@ -64,7 +64,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "50240513-457a-46e4-9318-19ad6a88efc1",
+      "id": "935d882e-90d6-4128-b250-de0cedb1debe",
       "kwargs": {
         "column": "Id",
         "type_": "int64"
@@ -73,17 +73,17 @@
       "type": "expect_column_values_to_be_of_type"
     },
     {
-      "id": "af4c5ac9-5c65-47cf-8e29-6933ebc124e7",
+      "id": "cabeb22b-9694-4cda-bd59-7b100826bc59",
       "kwargs": {
         "column": "MSSubClass",
-        "min_value": 0.0,
-        "max_value": 200.0
+        "max_value": 200.0,
+        "min_value": 0.0
       },
       "meta": {},
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "71fe8c93-5ce9-44a6-a86d-28a9303e7a0f",
+      "id": "db1d91a8-8dd8-41d5-bbf8-61514220966a",
       "kwargs": {
         "column": "MSSubClass",
         "type_": "float64"
@@ -92,7 +92,7 @@
       "type": "expect_column_values_to_be_of_type"
     },
     {
-      "id": "cd172088-e2f3-41ac-ad42-1878003488df",
+      "id": "3f9cc0ae-cf86-4f54-b61b-7fa2ece99a19",
       "kwargs": {
         "column": "SalePrice"
       },
@@ -100,7 +100,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "d6fec1ec-78be-47c0-a54d-99e8672c91fc",
+      "id": "bcca25b2-ed4d-441c-95be-b654c657acb8",
       "kwargs": {
         "column": "SalePrice",
         "min_value": 0.0
@@ -109,7 +109,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "f9a19742-020a-4762-a95d-c957fd5f1ec6",
+      "id": "b94f1c94-a45a-4f64-9a09-e9ba9ef455ca",
       "kwargs": {
         "column": "SalePrice",
         "type_": "int64"
@@ -118,7 +118,7 @@
       "type": "expect_column_values_to_be_of_type"
     }
   ],
-  "id": "a53601d5-006c-4137-8d62-62a06917cf1e",
+  "id": "6cacd1d7-b942-4c12-bfc0-5159a792ffa3",
   "meta": {
     "great_expectations_version": "1.1.2"
   },

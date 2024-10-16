@@ -77,21 +77,21 @@ data_docs_sites:
     show_how_to_buttons: true
     store_backend:
       class_name: TupleFilesystemStoreBackend
-      base_directory: uncommitted/data_docs/local_site/
+      base_directory: data_docs/local_site/
     site_index_builder:
       class_name: DefaultSiteIndexBuilder
 fluent_datasources:
   iowa_dataset:
     type: pandas
-    id: a36cc02a-cfc5-4001-a32f-4723291e918c
+    id: a5ed9b7d-6de2-4286-a8e6-f1c15231954d
     assets:
-      training:
+      iowa_processed_data:
         type: dataframe
-        id: 63eb325c-4298-44fc-b313-d3c2dfe61de0
+        id: d11fc801-64a6-4f0b-9295-dd5a5dcb7e5f
         batch_metadata: {}
         batch_definitions:
-          training_batch:
-            id: e17ccf44-33e4-4ff3-8e7b-8c659d89aebf
+          iowa_training_data:
+            id: 0be67027-6795-4e64-86f9-d69ff3f6a041
             partitioner:
 analytics_enabled:
-data_context_id: 1ad85348-942e-4cf2-8c6d-e9480cfcf85f
+data_context_id: 3f497e54-a76c-4109-b7e0-c4b5bfa44d0f

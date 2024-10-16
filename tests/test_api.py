@@ -37,10 +37,7 @@ def test_root(client):
     response = client.get("/")
     json = response.json()
     assert response.status_code == 200
-    assert (
-        json["data"]["message"]
-        == "Welcome to IRIS classifier! Please, read the `/docs`!"
-    )
+    assert json["data"]["message"] == "Welcome to IRIS classifier! Please, read the `/docs`!"
     assert json["message"] == "OK"
     assert json["status-code"] == 200
 

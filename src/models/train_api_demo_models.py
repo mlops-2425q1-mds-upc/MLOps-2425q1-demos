@@ -21,9 +21,7 @@ model_wrappers_list: List[dict] = []
 Iris_data = load_iris()
 
 # Split data
-Xtrain, Xtest, Ytrain, Ytest = train_test_split(
-    Iris_data.data, Iris_data.target, test_size=0.3, random_state=4
-)
+Xtrain, Xtest, Ytrain, Ytest = train_test_split(Iris_data.data, Iris_data.target, test_size=0.3, random_state=4)
 
 
 # ================== #
