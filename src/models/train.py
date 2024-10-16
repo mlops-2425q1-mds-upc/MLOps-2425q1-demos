@@ -18,7 +18,7 @@ with mlflow.start_run():
     params_path = Path("params.yaml")
 
     # Path of the prepared data folder
-    input_folder_path = PROCESSED_DATA_DIR
+    input_folder_path = PROCESSED_DATA_DIR / "iowa_dataset"
 
     # Read training dataset
     X_train = pd.read_csv(input_folder_path / "X_train.csv")

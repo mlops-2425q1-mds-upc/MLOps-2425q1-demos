@@ -68,8 +68,8 @@ X_train = imputed_X_train
 X_valid = imputed_X_valid
 
 # Path of the output data folder
-Path("data/processed").mkdir(exist_ok=True)
-prepared_folder_path = PROCESSED_DATA_DIR
+prepared_folder_path = PROCESSED_DATA_DIR / "iowa_dataset"
+Path(prepared_folder_path).mkdir(exist_ok=True)
 
 X_train_path = prepared_folder_path / "X_train.csv"
 y_train_path = prepared_folder_path / "y_train.csv"
