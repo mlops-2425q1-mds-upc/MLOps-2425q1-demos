@@ -56,7 +56,7 @@ if __name__ == "__main__":
     Path("metrics").mkdir(exist_ok=True)
     metrics_folder_path = METRICS_DIR
 
-    X_valid, y_valid = load_validation_data(PROCESSED_DATA_DIR)
+    X_valid, y_valid = load_validation_data(PROCESSED_DATA_DIR / "iowa_dataset")
 
     mlflow.set_experiment("iowa-house-prices")
 

@@ -11,45 +11,47 @@ stages:
       size: 460676
     - path: src/features/prepare.py
       hash: md5
-      md5: a6818a3358d0c52db5d18e9b29fc4528
-      size: 2624
+      md5: 1c6c872b5eef77df090262d212c15b74
+      size: 2645
+      isexec: true
     params:
       params.yaml:
         prepare.random_state: 2023
         prepare.test_size: 0.2
         prepare.train_size: 0.8
     outs:
-    - path: data/processed/X_train.csv
+    - path: data/processed/iowa_dataset/X_train.csv
       hash: md5
       md5: 8d638fac80a1e3c3da133026423213e9
       size: 212998
-    - path: data/processed/X_valid.csv
+    - path: data/processed/iowa_dataset/X_valid.csv
       hash: md5
       md5: b85d6dbfb6162db6cc70283c522301a0
       size: 53655
-    - path: data/processed/y_train.csv
+    - path: data/processed/iowa_dataset/y_train.csv
       hash: md5
       md5: 37e44c3a394132f52cdc69cc50842abd
       size: 13058
-    - path: data/processed/y_valid.csv
+    - path: data/processed/iowa_dataset/y_valid.csv
       hash: md5
       md5: a06f9b382ed2a355bdf82b09d524f76c
       size: 3267
   train:
     cmd: python -m src.models.train
     deps:
-    - path: data/processed/X_train.csv
+    - path: data/processed/iowa_dataset/X_train.csv
       hash: md5
       md5: 8d638fac80a1e3c3da133026423213e9
       size: 212998
-    - path: data/processed/y_train.csv
+    - path: data/processed/iowa_dataset/y_train.csv
       hash: md5
       md5: 37e44c3a394132f52cdc69cc50842abd
       size: 13058
     - path: src/models/train.py
       hash: md5
-      md5: 633522bc505f99da4308991ed228c069
-      size: 2389
+      md5: 340903b0a0b5f6479e6eb90fccef4b0f
+      size: 2406
+      isexec: true
     params:
       params.yaml:
         train.algorithm: RandomForestRegressor
@@ -57,31 +59,32 @@ stages:
     outs:
     - path: metrics/emissions.csv
       hash: md5
-      md5: 42519bd8c027c235c8b5fb47ca11cc45
-      size: 818
+      md5: 71317937c59695841af8f0d489272c7e
+      size: 895
     - path: models/iowa_model.pkl
       hash: md5
-      md5: 1553ce607c7b5c698f8fde5db0ee316a
+      md5: 3fc7d2f737686629a0fb26e0f3f17b70
       size: 11840699
   evaluate:
     cmd: python -m src.models.evaluate
     deps:
-    - path: data/processed/X_valid.csv
+    - path: data/processed/iowa_dataset/X_valid.csv
       hash: md5
       md5: b85d6dbfb6162db6cc70283c522301a0
       size: 53655
-    - path: data/processed/y_valid.csv
+    - path: data/processed/iowa_dataset/y_valid.csv
       hash: md5
       md5: a06f9b382ed2a355bdf82b09d524f76c
       size: 3267
     - path: models/iowa_model.pkl
       hash: md5
-      md5: 1553ce607c7b5c698f8fde5db0ee316a
+      md5: 3fc7d2f737686629a0fb26e0f3f17b70
       size: 11840699
     - path: src/models/evaluate.py
       hash: md5
-      md5: 88d02f596efa25ca14cb3bb5f981149b
-      size: 2454
+      md5: fb46e1a7218cd85d1620eff05ad65790
+      size: 2449
+      isexec: true
     outs:
     - path: metrics/scores.json
       hash: md5

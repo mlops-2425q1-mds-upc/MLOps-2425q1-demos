@@ -10,15 +10,15 @@ stages:
     - prepare.test_size
     - prepare.train_size
     outs:
-    - data/processed/X_train.csv
-    - data/processed/X_valid.csv
-    - data/processed/y_train.csv
-    - data/processed/y_valid.csv
+    - data/processed/iowa_dataset/X_train.csv
+    - data/processed/iowa_dataset/X_valid.csv
+    - data/processed/iowa_dataset/y_train.csv
+    - data/processed/iowa_dataset/y_valid.csv
   train:
     cmd: python -m src.models.train
     deps:
-    - data/processed/X_train.csv
-    - data/processed/y_train.csv
+    - data/processed/iowa_dataset/X_train.csv
+    - data/processed/iowa_dataset/y_train.csv
     - src/models/train.py
     params:
     - train.algorithm
@@ -31,8 +31,8 @@ stages:
   evaluate:
     cmd: python -m src.models.evaluate
     deps:
-    - data/processed/X_valid.csv
-    - data/processed/y_valid.csv
+    - data/processed/iowa_dataset/X_valid.csv
+    - data/processed/iowa_dataset/y_valid.csv
     - models/iowa_model.pkl
     - src/models/evaluate.py
     metrics:
