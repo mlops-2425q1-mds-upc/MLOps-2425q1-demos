@@ -25,7 +25,7 @@ with mlflow.start_run():
     y_train = pd.read_csv(input_folder_path / "y_train.csv")
 
     # Read data preparation parameters
-    with open(params_path, "r", encoding="utf8") as params_file:
+    with open(params_path, encoding="utf8") as params_file:
         try:
             params = yaml.safe_load(params_file)
             params = params["train"]

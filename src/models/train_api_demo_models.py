@@ -1,7 +1,6 @@
 """Sample training script"""
 
 import pickle
-from typing import List
 
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
@@ -10,7 +9,7 @@ from sklearn.svm import SVC
 
 from src.config import MODELS_DIR
 
-model_wrappers_list: List[dict] = []
+model_wrappers_list: list[dict] = []
 
 
 # ================ #

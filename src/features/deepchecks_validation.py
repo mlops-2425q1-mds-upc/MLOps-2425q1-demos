@@ -3,7 +3,6 @@ from deepchecks.vision.suites import data_integrity, train_test_validation
 
 from src.config import PROCESSED_DATA_DIR, REPORTS_DIR
 
-
 OUTPUT_FILE = REPORTS_DIR / "deepchecks_validation.html"
 
 train_ds, test_ds = classification_dataset_from_directory(

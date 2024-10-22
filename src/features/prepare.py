@@ -22,7 +22,7 @@ train_data = pd.read_csv(train_path, index_col="Id")
 test_data = pd.read_csv(test_path, index_col="Id")
 
 # Read data preparation parameters
-with open(params_path, "r") as params_file:
+with open(params_path) as params_file:
     try:
         params = yaml.safe_load(params_file)
         params = params["prepare"]
@@ -77,13 +77,13 @@ X_valid_path = prepared_folder_path / "X_valid.csv"
 y_valid_path = prepared_folder_path / "y_valid.csv"
 
 X_train.to_csv(X_train_path, index=False)
-print("Writing file {} to disk.".format(X_train_path))
+print(f"Writing file {X_train_path} to disk.")
 
 y_train.to_csv(y_train_path)
-print("Writing file {} to disk.".format(y_train_path))
+print(f"Writing file {y_train_path} to disk.")
 
 X_valid.to_csv(X_valid_path, index=False)
-print("Writing file {} to disk.".format(X_valid_path))
+print(f"Writing file {X_valid_path} to disk.")
 
 y_valid.to_csv(y_valid_path)
-print("Writing file {} to disk.".format(y_valid_path))
+print(f"Writing file {y_valid_path} to disk.")

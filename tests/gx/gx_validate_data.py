@@ -1,6 +1,6 @@
+import great_expectations as gx
 import pandas as pd
 
-import great_expectations as gx
 from src.config import PROCESSED_DATA_DIR
 
 # We import the existing DataContext

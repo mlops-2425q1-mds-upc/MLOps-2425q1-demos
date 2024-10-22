@@ -4,7 +4,6 @@ import logging
 import pickle
 from contextlib import asynccontextmanager
 from http import HTTPStatus
-from typing import Dict
 
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -15,7 +14,7 @@ from src.app.schemas import IrisPredictionPayload, IrisType
 from src.config import METRICS_DIR, MODELS_DIR
 
 # Initialize the dictionary to group models by "tabular" or "image" and then by model type
-model_wrappers_dict: Dict[str, Dict[str, dict]] = {"tabular": {}, "image": {}}
+model_wrappers_dict: dict[str, dict[str, dict]] = {"tabular": {}, "image": {}}
 
 
 def file_to_image(file: bytes):

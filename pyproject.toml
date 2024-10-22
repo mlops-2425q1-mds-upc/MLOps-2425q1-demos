@@ -29,7 +29,7 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [
-    "bandit>=1.7.10",
+    "bandit[toml]>=1.7.10",
     "deptry>=0.20.0",
     "dvc>=3.55.2",
     "httpx>=0.27.2",
@@ -39,10 +39,36 @@ dev-dependencies = [
     "pytest-cov>=5.0.0",
     "ruff>=0.6.9",
     "pyspark>=3.5.3",
+    "mypy>=1.12.0",
+    "pandas-stubs>=2.2.3.241009",
+    "types-pyyaml>=6.0.12.20240917",
+    "types-requests>=2.32.0.20241016",
+    "types-ujson>=5.10.0.20240515",
 ]
 
 [tool.ruff]
 line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
 
 [tool.coverage.run]
 omit = ["src/prepare.py", "src/evaluate.py", "src/train.py", "src/train_api_demo_models.py"]

@@ -1,5 +1,4 @@
 import great_expectations as gx
-
 from great_expectations.exceptions import DataContextError
 
 # We import the existing DataContext

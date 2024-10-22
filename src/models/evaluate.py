@@ -62,9 +62,7 @@ if __name__ == "__main__":
 
     with mlflow.start_run():
         # Load the model
-        val_mae, val_mean_squared_error = evaluate_model(
-            "iowa_model.pkl", X_valid, y_valid
-        )
+        val_mae, val_mean_squared_error = evaluate_model("iowa_model.pkl", X_valid, y_valid)
 
         # Save the evaluation metrics to a dictionary to be reused later
         metrics_dict = {"mae": val_mae, "mean_squared_error": val_mean_squared_error}
